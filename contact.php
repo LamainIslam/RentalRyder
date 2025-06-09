@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
 
     // --- CONFIGURATION ---
     // Change this to your email address
-    $recipient_email = "your-email@example.com"; 
+    $recipient_email = "lamainislam@gmail.com"; 
 
     // --- GET FORM DATA ---
     // Sanitize user input to prevent security issues
