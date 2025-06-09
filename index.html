@@ -204,13 +204,31 @@
             <h2 class="section-title text-center">Get In Touch</h2>
             <div class="row g-4">
                 <div class="col-lg-6">
-                    <h4 class="fw-bold mb-3">Send us a message</h4>
-                    <form>
-                        <div class="mb-3"><input type="text" class="form-control" placeholder="Your Name" required></div>
-                        <div class="mb-3"><input type="email" class="form-control" placeholder="Your Email" required></div>
-                        <div class="mb-3"><textarea class="form-control" rows="5" placeholder="Your Message" required></textarea></div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                  <h4 class="fw-bold mb-3">Send us a message</h4>
+                  <form action="contact.php" method="post">
+                      <div class="mb-3">
+                          <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                      </div>
+                      <div class="mb-3">
+                          <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                      </div>
+                      <div class="mb-3">
+                          <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+                      </div>
+                      <button type="submit" name="submit" class="btn btn-primary">Send Message</button>
+                  </form>
+                  
+                  <script>
+                      window.addEventListener('load', function() {
+                          const urlParams = new URLSearchParams(window.location.search);
+                          const status = urlParams.get('status');
+                          if (status === 'success') {
+                              alert('Thank you! Your message has been sent.');
+                          } else if (status === 'error') {
+                              alert('Sorry, there was an error sending your message. Please try again.');
+                          }
+                      });
+                  </script>
                 </div>
                 <div class="col-lg-6">
                     <h4 class="fw-bold mb-3">Contact Information</h4>
