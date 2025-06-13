@@ -45,6 +45,22 @@ body {
 .card:hover {
   transform: translateY(-5px);
 }
+.carousel-item {
+  padding: 20px 0;
+}
+
+.carousel-controls {
+  margin-top: 20px;
+}
+
+.carousel-controls .btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+
+.carousel-controls .btn i {
+  font-size: 14px;
+}
 .accordion-button:not(.collapsed) {
   background-color: #e7f1ff;
   color: #000;
